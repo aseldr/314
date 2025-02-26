@@ -12,22 +12,22 @@ public class UserDTO {
 
     private Long id;
 
-    @NotEmpty(message = "First name should not be empty")
-    @Size(max = 32, message = "First name should be shorter than 32 characters")
+    @NotEmpty(message = "Это поле не можеть быть пустым")
+    @Size(max = 32, message = "Имя пользователя должно быть не менее 32 знаков")
     private String firstName;
 
-    @NotEmpty(message = "Last name should not be empty")
-    @Size(max = 32, message = "Last name should be shorter than 32 characters")
+    @NotEmpty(message = "Это поле не можеть быть пустым")
+    @Size(max = 32, message = "Имя пользователя должно быть не менее 32 знаков")
     private String lastName;
 
-    @NotEmpty(message = "Email should not be empty")
-    @Email(message = "Email should be valid")
+    @NotEmpty(message = "Это поле не можеть быть пустым")
+    @Email(message = "Почтовый адрес должен быть действительным")
     private String email;
 
-    @Min(value = 1, message = "Age should be greater than 0")
+    @Min(value = 1, message = "Возраст должен быть больше 0")
     private int age;
 
-    @NotEmpty(message = "Password should not be empty")
+    @NotEmpty(message = "Это поле не можеть быть пустым")
     private String userPassword;
 
     private List<RoleDTO> roles = new ArrayList<>();
